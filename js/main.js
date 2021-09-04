@@ -22,7 +22,7 @@ nextButton.addEventListener("click", () => {
 checkButton.addEventListener("click", () => {
     hideMessage();
     if (billAmount.value > 0 ){
-        if( cashGiven.value >= billAmount.value ){
+        if( Number(cashGiven.value) >= Number(billAmount.value) ){
             changeContainer.style.display="block";
             const amountToBeReturned = cashGiven.value - billAmount.value;
             calculateChange(amountToBeReturned);
